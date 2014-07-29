@@ -69,8 +69,10 @@ module.exports = function (grunt) {
 
         if (options.algorithm === "crc32" &&
            (typeof crc !== "undefined" && crc !== null)) {
-          hash = new crc.CRC32().update(grunt.file.read(file)).hexdigest();
+          var _hash = new crc.CRC32();
+              _hash.update(grunt.file.read(file));
 
+          hash = _hash.hexdigest();
         } else {
           hash = crypto.createHash(options.algorithm).update(grunt.file.read(file), options.encoding).digest('hex');
         }
