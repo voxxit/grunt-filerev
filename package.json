@@ -27,11 +27,12 @@
     "each-async": "~0.1.0"
   },
   "devDependencies": {
+    "benchmark": "^1.0.0",
     "grunt": "~0.4.2",
-    "grunt-contrib-copy": "~0.4.0",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-simple-mocha": "~0.4.0",
-    "grunt-contrib-jshint": "~0.7.2"
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-simple-mocha": "~0.4.0"
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"

@@ -52,7 +52,14 @@ The file encoding.
 Type: `String`  
 Default: `'md5'`
 
-`algorithm` is dependent on the available algorithms supported by the version of OpenSSL on the platform. Examples are `'sha1'`, `'md5'`, `'sha256'`, `'sha512'`, etc. On recent releases, `openssl list-message-digest-algorithms` will display the available digest algorithms.
+For the fastest availalbe hashing, use `'crc32'`, and install the C/C++
+library which can be installed via `npm install sse4_crc32`.
+
+Otherwise, `algorithm` is dependent on the available algorithms supported
+by the version of OpenSSL on the platform. Examples are `'sha1'`, `'md5'`,
+`'sha256'`, `'sha512'`, etc. On recent releases,
+`openssl list-message-digest-algorithms` will display the available digest
+algorithms.
 
 #### options.length
 
