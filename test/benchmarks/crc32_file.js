@@ -1,7 +1,7 @@
 var Benchmark = require('benchmark'),
     suite = new Benchmark.Suite,
     fs = require('fs'),
-    filePath = "./1KB.txt",
+    filePath = "./test/benchmarks/1KB.txt",
 
     // C/C++ CRC32 algorithm
     // https://github.com/Voxer/sse4_crc32
