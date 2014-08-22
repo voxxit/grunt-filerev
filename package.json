@@ -1,6 +1,6 @@
 {
   "name": "grunt-filerev",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Asset revisioning by using file content hashing",
   "keywords": [
     "gruntplugin",
@@ -15,24 +15,25 @@
     "email": "frederick.ros@gmail.com",
     "url": "https://github.com/sleeper"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/yeoman/grunt-filerev.git"
-  },
+  "private": true,
+  "repository": "voxxit/grunt-filerev",
   "scripts": {
     "test": "grunt"
   },
+  "files": [
+    "tasks"
+  ],
   "dependencies": {
-    "chalk": "~0.4.0",
-    "each-async": "~0.1.0"
+    "chalk": "^0.5.1",
+    "each-async": "0.1.0"
   },
   "devDependencies": {
     "benchmark": "^1.0.0",
-    "grunt": "~0.4.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.4.0",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-simple-mocha": "~0.4.0"
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-simple-mocha": "^0.4.0"
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
@@ -40,7 +41,5 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "licenses": {
-    "type": "BSD"
-  }
+  "license": "BSD"
 }

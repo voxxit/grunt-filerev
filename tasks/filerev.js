@@ -6,7 +6,7 @@
 //   `npm install sse4_crc32`
 //
 try {
-  var crc = require('sse4_crc32');
+  var CRC32 = require('sse4_crc32').CRC32;
 
   // return the hex-encoded hash
   // value of the CRC32 object in the
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
       // If dest is furnished it should indicate a directory
       if (el.dest) {
         // When globbing is used, el.dest contains basename, we remove it
-        if(el.orig.expand) {
+        if (el.orig.expand) {
           el.dest = path.dirname(el.dest);
         }
 
@@ -65,6 +65,7 @@ module.exports = function (grunt) {
         if (grunt.file.isDir(file)) {
           return;
         }
+
         var dirname, hash;
 
         if (options.algorithm === "crc32" &&
@@ -95,6 +96,7 @@ module.exports = function (grunt) {
         filerev.summary[path.normalize(file)] = path.join(dirname, newName);
         grunt.log.writeln(chalk.green('✔ ') + file + chalk.gray(' changed to ') + newName);
       });
+
       next();
     }, this.async());
 
